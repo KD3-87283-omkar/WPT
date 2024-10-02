@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="position: absolute; margin-top: -200px;">
+    <img id="car" src="https://t3.ftcdn.net/jpg/02/67/34/84/360_F_267348471_Ria7Dbt9HpMZnUkDi1v2QqcmKEb9bktt.jpg"
+        alt="meta" height="220px"></div>
+    <div style="position: relative; margin-top: 250px; "><hr style="margin-left: 5px;height: 25px; background-color: gray; width: 50%;">
+    <button type="button" onclick="dosomething()">Start</button>
+    <button type="button" onclick="stop()">Stop</button>
+    <input type="number" id="x">
+    <input type="number" id="y">
+</div>
+
+
+    <script>
+        var n = 0;
+        var b=0;
+        var s;
+        var a = document.getElementById("car");
+        function dosomething() {
+            s = window.setInterval(run, 100);
+        }
+        function run() {
+            n = n + 10;
+            var aa=document.getElementById("x");
+            var yy=document.getElementById("y");
+            aa.value=n;
+            if (n < 420) {
+                a.style.marginLeft = n + "px";
+            }
+            else{
+                
+                b+=10;
+                yy.value=b;
+                a.style.marginTop=b+"px";
+            }
+        }
+        function stop() {
+            window.clearInterval(s);
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

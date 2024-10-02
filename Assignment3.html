@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 90px;
+            
+        }
+        .inner{
+            display: flex;
+           
+           direction: ltr;
+           background-color: red;
+           border: 1px solid red;
+        }
+        span{
+            margin-right: 10px;
+        }
+        #r{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+      <center>Registration Form</center>
+
+
+      
+      <div class="main">
+        <div class="inner1">
+              <iframe src="https://www.youtube.com/embed/KlL5ez56RvM?si=eu_DcocB3UYD2HqZ" height="300px" width="300px"></iframe>
+           
+        </div>
+
+        <div class="inner2">
+         <!-- <label for="">Name<input type="text"  id="name"></label> -->
+         <table>
+            <tr>
+                <td colspan="1"><label for="">Name</label></td>
+                <td colspan="3"><input type="text" id="name"> </td>
+            </tr>
+            <tr>
+                <td colspan="1"><label for="">BirthDate</label></td>
+                <td colspan="3"><input type="date" id="date"></td>
+            </tr>
+            <tr>
+                <td colspan="1"><label for="">Email</label></td>
+                <td colspan="3"><input type="email" id="email"/></td>
+            </tr>
+            <tr>
+                <td colspan="1"><label for="">Password</label></td>
+                <td colspan="3"><input type="Password" id="password"></td>
+            
+            </tr>
+            <tr>
+                <td > <label for="">Address</label></td>
+                <td ><select>
+                    <option value="">Maharashtra</option>
+                    <option value="">Gujrat</option>
+                    <option value="">Keral</option>
+                 </select></td>
+                <td>
+                    <select>
+                        <option value="">Pune</option>
+                        <option value="">Satara</option>
+                        <option value="">Kolhapur</option>
+                     </select>
+                </td>
+                <td><select>
+                    <option value="">Pune</option>
+                    <option value="">Karad</option>
+                    <option value="">Hinjewadi</option>
+                 </select></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>State</td>
+                <td>District</td>
+                <td>City</td>
+            </tr>
+            <tr aria-rowspan="2">
+                <td> <label for="gender">Gender</label></td>
+                <td> <input type="radio" name="gend" id="r">Male</td>
+                <td><input type="radio" name="gend" id="r">Female</td>
+                <td><input type="radio" name="gend" id="r">Other</td>
+            </tr>
+            <tr>
+                <!-- <td><label for="">Upload Photo</label></td> -->
+                 
+                <td>Upload Photo</td>
+                <td colspan="2"><input type=""></td>
+                
+            </tr>
+            <tr aria-rowspan="2">
+                <td>Select Your Course</td>
+                <td><select aria-placeholder="Select Course">
+                    <option value="select course">Java</option>
+                    <option>CPP</option>
+                    <option>C</option>
+                </select></td>
+                <td></td>
+                <td></td>
+            </tr>
+         </table>
+         
+        <button type="button" value="Register">Register</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" value="Clear">Clear</button>
+               <!-- &nbsp;&nbsp;&nbsp;&nbsp;State&nbsp;&nbsp;District -->
+
+
+
+
+
+        </div>
+      </div>
+      
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <center>
+        <h1>Calculator</h1>
+    </center>
+    <center>
+        <div class="main">
+            <div class="first">
+                <label for="">Enter No 1 <input type="number" id="n1"></label>
+            </div>
+            <p id="error1"></p>
+            <br>
+            <div class="first">
+                <label for="">Enter No 2 <input type="number" id="n2"></label>
+            </div>
+            <p id="error2"></p>
+            <br>
+            <div class="first">
+                <label for="">Result <input type="number" id="n3"></label>
+            </div>
+            <br>
+            <div class="operation">
+                <button onclick="calculation(1)">Addition</button>
+                <button onclick="calculation(2)">substract</button>
+                <button onclick="calculation(3)">division</button>
+                <button onclick="calculation(4)">Multiplication</button>
+
+            </div>
+        </div>
+    </center>
+
+    <script>
+        var a = document.getElementById("n1");
+        var b = document.getElementById("n2");
+        var c = document.getElementById("n3")
+        debugger;
+        function calculation(n) {
+            if (a.value == "") {
+                var em1 = document.getElementById("error1");
+                em1.innerText = "Num 1 is empty";
+                em1.style.color = "red";
+
+            }
+            else if (b.value == "") {
+                var em2 = document.getElementById("error2");
+                em2.innerText = "Num 2 is empty";
+                em2.style.color = "red";
+            }
+            else
+            {
+                var e1=document.getElementById("error1");
+                e1.innerText="";
+                var e2=document.getElementById("error2");
+                e2.innerText="";
+            switch(n){
+                 case 1:
+                 c.value = Number(a.value) +Number(b.value);
+                 break;
+                 case 2:
+                 c.value = Number(a.value) - Number(b.value);
+                 break;
+                 case 3:{
+                 if((Number(b.value))==0)
+                    {
+                         var r=document.getElementById("error2");
+                         r.innerText="Divisor can not be 0";
+                         r.style.color="red";
+                    }
+                    else{
+                          
+                          c.value = Number(a.value) / Number(b.value);
+                    }
+                 break;
+                }
+                 case 4:
+                    
+                 c.value = Number(a.value) * Number(b.value);
+                 break;
+            }
+
+        }
+    }
+    </script>
+
+</body>
+
+</html>
